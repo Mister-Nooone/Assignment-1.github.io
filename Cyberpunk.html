@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Cyberpunk: Night-City" name="description"/>
+<title>Cyberpunk: Night-City</title>
+<link href="veryshortstory.css" rel="stylesheet"/>
+</head>
+<body class="cyber-page" data-setting="cyberpunk">
+<header class="site-header">
+<h1 class="site-title">Wake up, samurai!</h1>
+<div class="header-actions">
+<div class="settings-dropdown">
+<button aria-expanded="false" class="settings-btn" type="button">Сеттинги ▾</button>
+<ul>
+<li><button onclick="navigateTo('Cyberpunk.html')" type="button">Cyberpunk: Night-City</button></li>
+<li><button onclick="navigateTo('Ivanhoe.html')" type="button">Ivanhoe: The Saga of the Foggy Albion</button></li>
+<li><button onclick="navigateTo('site3.html')" type="button">The Corporate War</button></li>
+</ul>
+</div>
+<button aria-label="Включить музыку" class="music-btn" id="music-icon" type="button">
+<img alt="Музыка выключена" src="mus-off.png"/>
+</button>
+<audio id="background-music" loop="" preload="none">
+<source src="CyberFontMus.mp3" type="audio/mpeg"/>
+</audio>
+</div>
+</header>
+<main class="container">
+<article class="box" data-popup="lore-popup" role="button" tabindex="0">
+<img alt="Лор Найт-Сити" class="box-image" src="cyber3.jpeg"/>
+<div class="box-content"><h2 class="box-title">Лор Найт-Сити</h2><p class="box-subtitle">Мир Cyberpunk RED</p></div>
+</article>
+<article class="box" data-popup="shop-popup" role="button" tabindex="0">
+<img alt="Оружейная комната" class="box-image" src="cyberband.jpeg"/>
+<div class="box-content"><h2 class="box-title">Оружейная комната</h2><p class="box-subtitle">Арсенал Найт-Сити</p></div>
+</article>
+<article class="box" data-popup="character-popup" role="button" tabindex="0">
+<div class="placeholder-art"><div class="placeholder-icon">♙</div></div>
+<div class="box-content"><h2 class="box-title">Личный лист персонажа</h2><p class="box-subtitle">Ваш герой, характеристики и инвентарь</p></div>
+</article>
+<article class="box" data-popup="chat-popup" role="button" tabindex="0"><div class="placeholder-art"><div class="placeholder-icon">☏</div></div><div class="box-content"><h2 class="box-title">Чат</h2><p class="box-subtitle">Разговор с персонажами мира</p></div></article>
+</main>
+<div aria-hidden="true" class="popup" id="lore-popup">
+<div class="popup-backdrop"></div>
+<section class="popup-panel">
+<img alt="Картинка 3" class="popup-art-image" src="cyber3.jpeg">
+<p>
+      Эй, чумба, ты попал на эту страницу? Значит, хочешь узнать побольше про наш крутой мир Cyberpunk RED, а? Я здесь, чтобы ввести тебя в этот мир, где высочайшие технологии и очень низкий уровень жизни идут рука об руку. Здесь ты можешь стать кем угодно – от мощного корпората до свободного номада, от искателя приключений до суперзвезды. Готов крушить систему или стать её опорой? Хватит листать и начни читать, пока твоя кибернетическая рука не устала от кликов!
+    </p>
+<img alt="Картинка 1" class="popup-art-image" src="cyber1.jpg">
+<p>
+      О'кей, кибер-братан, пришло время погрузиться в мир Cyberpunk RED, место, где технологии будущего и мрачные улицы Найт-Сити становятся твоей новой реальностью. Здесь ты сможешь оторваться от серых будней и окунуться в атмосферу киберпанка, где кибернетические импланты и голограммы – это наша повседневная жизнь.
+    </p>
+<img alt="Картинка 2" class="popup-art-image" src="cyber2.jpg">
+<p>
+      Начнем с того, что Найт-Сити – это главный городок нашей истории. Место, где корпорации дерутся за власть, а уличные банды кидают вызов системе. Здесь ты столкнешься с различными фракциями, которые пытаются пережить в этом суровом мире – от корпоратов и полиции до хакеров, наемников и номадов.
+    </p>
+<button class="popup-close" type="button">Закрыть</button>
+</img></img></img></section>
+</div>
+<div aria-hidden="true" class="popup" id="shop-popup">
+<div class="popup-backdrop"></div>
+<section class="popup-panel popup-wide">
+<img alt="Картинка 3" class="popup-art-image" src="cyberband.jpeg"/>
+<h2>Оружейная комната</h2>
+<p>
+      Oi, чумба! Найт-Сити - не безопасное место и точно не подходит для мирных ночных прогулок, смекаешь, о чём я? По глазам вижу, что смекаешь! Правила просты: есть евродоллары - есть оружие.
+    </p>
+<p>
+<table class="shop-table">
+<thead>
+<tr>
+<th>Тип</th>
+<th>Название</th>
+<th>Урон</th>
+<th>Обойма</th>
+<th>Цена</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Пистолет</td>
+<td>"Угасание ночи"</td>
+<td>1d6</td>
+<td>21</td>
+<td>120 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет</td>
+<td>"Малориан армс 3516"</td>
+<td>1d12</td>
+<td>8</td>
+<td>350 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет</td>
+<td>"План Б"</td>
+<td>1d10</td>
+<td>12</td>
+<td>240 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет</td>
+<td>"Гордость"</td>
+<td>1d12</td>
+<td>12</td>
+<td>240 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет</td>
+<td>"Конго"</td>
+<td>1d20</td>
+<td>9</td>
+<td>410 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет</td>
+<td>"Ла Чингона Дорада"</td>
+<td>1d20</td>
+<td>10</td>
+<td>450 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет</td>
+<td>"Навождение"</td>
+<td>1d10</td>
+<td>12</td>
+<td>230 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет</td>
+<td>"Хаос"</td>
+<td>1d12</td>
+<td>12</td>
+<td>280 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет</td>
+<td>"Лиззи"</td>
+<td>2d8</td>
+<td>9</td>
+<td>360 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет-пулемёт</td>
+<td>"М221 Саратога"</td>
+<td>6d4</td>
+<td>30</td>
+<td>350 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет-пулемёт</td>
+<td>"М221 Саратога"</td>
+<td>6d4</td>
+<td>30</td>
+<td>350 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет-пулемёт</td>
+<td>"Сигуринэ"</td>
+<td>7d4</td>
+<td>30</td>
+<td>360 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет-пулемёт</td>
+<td>"Решала"</td>
+<td>7d4</td>
+<td>30</td>
+<td>350 евродолларов</td>
+</tr>
+<tr>
+<td>Пистолет-пулемёт</td>
+<td>"Фенрир"</td>
+<td>6d5</td>
+<td>30</td>
+<td>370 евродолларов</td>
+</tr>
+<tr>
+<td>Ружья</td>
+<td>"Крашер"</td>
+<td>8d2 + 4</td>
+<td>12</td>
+<td>550 евродолларов</td>
+</tr>
+<tr>
+<td>Ружья</td>
+<td>"Шельма"</td>
+<td>5d6</td>
+<td>5</td>
+<td>480 евродолларов</td>
+</tr>
+<tr>
+<td>Ружья</td>
+<td>"Монарх"</td>
+<td>6d8 + 4</td>
+<td>2</td>
+<td>850 евродолларов</td>
+</tr>
+<tr>
+<td>Штурмовые винтовки</td>
+<td>"Новаки"</td>
+<td>3d8</td>
+<td>30</td>
+<td>550 евродолларов</td>
+</tr>
+<tr>
+<td>Штурмовые винтовки</td>
+<td>"D5 Копперхед"</td>
+<td>6d4+4</td>
+<td>30</td>
+<td>850 евродолларов</td>
+</tr>
+<tr>
+<td>Штурмовые винтовки</td>
+<td>"M251S Аякс"</td>
+<td>5d6</td>
+<td>30</td>
+<td>950 евродолларов</td>
+</tr>
+<tr>
+<td>Винтовка</td>
+<td>Ноль-пять</td>
+<td>1d20+15</td>
+<td>4</td>
+<td>2500 евродолларов</td>
+</tr>
+</tbody>
+</table>
+</p>
+<button class="popup-close" type="button">Закрыть</button>
+</section>
+</div>
+<div aria-hidden="true" class="popup" id="character-popup">
+<div class="popup-backdrop"></div>
+<section class="popup-panel popup-wide">
+<h2>Личный лист персонажа</h2>
+<p class="shop-intro">Данные сохраняются в браузере на этом устройстве. Изображение хранится локально и не отправляется на сервер.</p>
+<form id="character-form">
+<div class="sheet-grid">
+<div class="form-section">
+<h3 class="section-title">Основные сведения</h3>
+<div class="fields">
+<div class="field full"><label for="fullName">ФИО</label><input autocomplete="off" id="fullName" name="fullName" type="text"/></div>
+<div class="field"><label for="className">Класс</label><input autocomplete="off" id="className" name="className" type="text"/></div>
+<div class="field"><label for="race">Раса</label><input autocomplete="off" id="race" name="race" type="text"/></div>
+<div class="field"><label for="age">Возраст</label><input id="age" min="0" name="age" step="1" type="number"/></div>
+<div class="field"><label for="height">Рост</label><input id="height" name="height" placeholder="например, 178 см" type="text"/></div>
+<div class="field"><label for="weight">Вес</label><input id="weight" name="weight" placeholder="например, 72 кг" type="text"/></div>
+<div class="field full"><label for="biography">Биография</label><textarea id="biography" name="biography"></textarea></div>
+<div class="field full"><label for="personality">Характер</label><textarea id="personality" name="personality"></textarea></div>
+</div>
+</div>
+<div class="form-section">
+<h3 class="section-title">Внешность</h3>
+<div class="portrait-card">
+<div class="portrait-frame">
+<img alt="Портрет персонажа" id="portrait-preview"/>
+<div class="portrait-placeholder">Место для<br/>портрета</div>
+</div>
+<div>
+<label class="file-label" for="portrait-input">Загрузить изображение</label>
+<input accept=".png,.jpg,.jpeg,image/png,image/jpeg" hidden="" id="portrait-input" type="file"/>
+<div class="file-hint">PNG/JPG, не более 3 МБ.</div>
+<div class="status" id="portrait-status"></div>
+<button class="secondary-button hidden" id="delete-portrait" type="button">Удалить портрет</button></div>
+</div>
+</div>
+<div class="form-section">
+<h3 class="section-title">Характеристики</h3>
+<p class="shop-intro">Введите значение от 1 до 20. Модификатор рассчитывается как ⌊(характеристика − 10) / 2⌋.</p>
+<div class="stats-grid">
+<div class="stat-card"><div class="stat-name">Сила</div><input data-stat="strength" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="strength">+0</div></div>
+<div class="stat-card"><div class="stat-name">Ловкость</div><input data-stat="dexterity" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="dexterity">+0</div></div>
+<div class="stat-card"><div class="stat-name">Телосложение</div><input data-stat="constitution" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="constitution">+0</div></div>
+<div class="stat-card"><div class="stat-name">Интеллект</div><input data-stat="intelligence" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="intelligence">+0</div></div>
+<div class="stat-card"><div class="stat-name">Мудрость</div><input data-stat="wisdom" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="wisdom">+0</div></div>
+<div class="stat-card"><div class="stat-name">Харизма</div><input data-stat="charisma" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="charisma">+0</div></div>
+</div>
+</div>
+<div class="form-section wallet-section"><h3 class="section-title">Кошелёк</h3><div class="wallet-box" id="wallet-value"></div></div></div>
+<div class="form-section" style="margin-top:22px;">
+<h3 class="section-title">Инвентарь</h3>
+<div class="table-wrap">
+<table class="inventory-table">
+<thead><tr><th>Предмет</th><th>Кол-во</th><th>Урон / кубик</th><th>Примечание</th><th></th></tr></thead>
+<tbody id="inventory-body"></tbody>
+</table>
+</div>
+<div class="actions">
+<button class="primary-button" id="add-inventory" type="button">+ Добавить предмет</button>
+<button class="primary-button" id="save-character" type="button">Сохранить лист</button>
+<button class="secondary-button" id="export-character" type="button">Скачать JSON</button><label class="secondary-button import-label" for="import-character">Импортировать JSON</label><input accept=".json,application/json" hidden="" id="import-character" type="file"/></div>
+<div class="status" id="character-status"></div>
+</div>
+<div class="form-section notes-section"><h3 class="section-title">Заметки персонажа</h3><textarea class="notes-area" id="character-notes" name="characterNotes" placeholder="Личные записи персонажа..."></textarea></div></form>
+<button class="popup-close" type="button">Закрыть</button>
+</section>
+</div><div aria-hidden="true" class="popup" id="chat-popup"><div class="popup-backdrop"></div><section class="popup-panel chat-panel"><h2>Чат</h2><p class="shop-intro">Здесь персонаж может разговаривать с заскриптованными обитателями мира. Реплики торговцев появляются автоматически при покупке.</p><div class="chat-messages" id="chat-messages"></div><form class="chat-form" id="chat-form"><input autocomplete="off" id="chat-input" maxlength="500" placeholder="Напишите сообщение..." type="text"/><button class="primary-button" type="submit">Отправить</button></form><button class="popup-close" type="button">Закрыть</button></section></div>
+
+<footer class="site-footer">Личные данные персонажа и заметки сохраняются локально в браузере.</footer>
+
+<script defer="True" src="rpg-site.js"></script></body>
+</html>

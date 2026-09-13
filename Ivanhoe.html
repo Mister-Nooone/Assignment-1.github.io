@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Ivanhoe: The Saga of the Foggy Albion" name="description"/>
+<title>Ivanhoe: The Saga of the Foggy Albion</title>
+<link href="ivanhoe.css" rel="stylesheet"/>
+</head>
+<body class="ivanhoe-page" data-setting="ivanhoe">
+<header class="site-header">
+<h1 class="site-title">Welcome, traveler!</h1>
+<div class="header-actions">
+<div class="settings-dropdown">
+<button aria-expanded="false" class="settings-btn" type="button">Сеттинги ▾</button>
+<ul>
+<li><button onclick="navigateTo('Cyberpunk.html')" type="button">Cyberpunk: Night-City</button></li>
+<li><button onclick="navigateTo('Ivanhoe.html')" type="button">Ivanhoe: The Saga of the Foggy Albion</button></li>
+<li><button onclick="navigateTo('site3.html')" type="button">The Corporate War</button></li>
+</ul>
+</div>
+<button aria-label="Включить музыку" class="music-btn" id="music-icon" type="button">
+<img alt="Музыка выключена" src="mus-off.png"/>
+</button>
+<audio id="background-music" loop="" preload="none">
+<source src="Jehny.mp3" type="audio/mpeg"/>
+</audio>
+</div>
+</header>
+<main class="container">
+<article class="box" data-popup="lore-popup" role="button" tabindex="0">
+<img alt="Легенды Фогги Альбиона" class="box-image" src="tavern2.jpg"/>
+<div class="box-content"><h2 class="box-title">Легенды Альбиона</h2><p class="box-subtitle">Лор Альбиона</p></div>
+</article>
+<article class="box" data-popup="shop-popup" role="button" tabindex="0">
+<img alt="Оружейная комната" class="box-image" src="armory.jpg"/>
+<div class="box-content"><h2 class="box-title">Оружейная комната</h2><p class="box-subtitle">Снаряжение для странствий</p></div>
+</article>
+<article class="box" data-popup="character-popup" role="button" tabindex="0">
+<div class="placeholder-art"><div class="placeholder-icon">♙</div></div>
+<div class="box-content"><h2 class="box-title">Личный лист персонажа</h2><p class="box-subtitle">Ваш герой, характеристики и инвентарь</p></div>
+</article>
+<article class="box" data-popup="chat-popup" role="button" tabindex="0"><div class="placeholder-art"><div class="placeholder-icon">☏</div></div><div class="box-content"><h2 class="box-title">Чат</h2><p class="box-subtitle">Разговор с персонажами мира</p></div></article>
+</main>
+<div aria-hidden="true" class="popup" id="lore-popup">
+<div class="popup-backdrop"></div>
+<section class="popup-panel">
+<img alt="Картинка 3" class="popup-art-image" src="tavern2.jpg">
+<p>
+      В глубинах древних лесов, в тени величественных замков, раскрывается удивительный мир. Здесь, среди вековых деревьев и таинственных созданий, витают магия и загадки, раскрывая свои чары перед смельчаками, готовыми исследовать каждый уголок этого волшебного царства.       Всевозможные существа, от эльфов и гномов до драконов и ведьм, населяют этот удивительный мир. Заколдованные леса и древние замки скрывают в себе тайны, ожидающие своего откровения. Здесь каждый уголок наполнен волшебством, а каждый персонаж обладает своей уникальной историей, дарящей путешественникам удивительные встречи и незабываемые приключения.
+    </p>
+<img alt="Картинка 1" class="popup-art-image" src="tavern3.jpg">
+<p>
+      В эпическом мире фэнтези, где смешиваются добро и зло, разгораются битвы, ставшие легендами. Герои возвышают свои клинки, чтобы столкнуться с тьмой, великие воины встречаются на поле сражения, а воздух наполняется напряжением перед предстоящим противостоянием.    </p>
+<img alt="Картинка 2" class="popup-art-image" src="tavern1.jpg">
+<p>
+      После изнурительных приключений и эпических сражений герои находят уют в атмосферной таверне, где звучит музыка, а свет от свечей создает уютное свечение. В этом убежище от приключений встречаются разные персонажи: от бравых воинов до загадочных волшебников.
+      Старый трактир становится местом для обмена историями, смеха и отдыха. Здесь можно услышать легенды о далеких землях, победах и поражениях, а также завести новых друзей. Таверна становится не только местом для восстановления сил, но и центром, где кульмируются воспоминания об увлекательном и опасном мире фэнтези.
+      </p>
+<button class="popup-close" type="button">Закрыть</button>
+</img></img></img></section>
+</div>
+<div aria-hidden="true" class="popup" id="shop-popup">
+<div class="popup-backdrop"></div>
+<section class="popup-panel popup-wide">
+<img alt="Картинка 3" class="popup-art-image" src="armory.jpg"/>
+<h2>Оружейная комната</h2>
+<p>
+      После долгого пути оружейная комната встречает путника сталью, деревом и звонким звуком монет. Здесь можно подобрать оружие для самых разных приключений — от простой дубины до длинного лука. Выбирай с умом: хороший клинок часто оказывается вернее самого смелого обещания.
+    </p>
+<p>
+<table class="shop-table">
+<th>
+<tr>
+<th>Тип</th>
+<th>Название</th>
+<th>Урон</th>
+<th>Свойства</th>
+<th>Цена</th>
+</tr>
+</th>
+<tbody>
+<tr>
+<td>Простое рукопашное</td>
+<td>Дубина</td>
+<td>1d4 дробящий</td>
+<td>Тяжелое</td>
+<td>1 серебряная монета</td>
+</tr>
+<tr>
+<td>Простое рукопашное</td>
+<td>Кастет</td>
+<td>1d4 дробящий</td>
+<td>-</td>
+<td>5 серебряных монет</td>
+</tr>
+<tr>
+<td>Простое рукопашное</td>
+<td>Молот для метания</td>
+<td>1d4 дробящий</td>
+<td>Метательное (диапазон 20 футов)</td>
+<td>2 серебряные монеты</td>
+</tr>
+<tr>
+<td>Простое рукопашное</td>
+<td>Посох</td>
+<td>1d6 ударный</td>
+<td>Двуручное, легкое</td>
+<td>2 золотые монеты</td>
+</tr>
+<tr>
+<td>Простое рукопашное</td>
+<td>Кинжал</td>
+<td>1d4 колющий</td>
+<td>Легкое, метательное (диапазон 20 футов)</td>
+<td>2 золотые монеты</td>
+</tr>
+<tr>
+<td>Простое рукопашное</td>
+<td>Рукавица с шипами</td>
+<td>1d4 колющий</td>
+<td>Легкое</td>
+<td>5 серебряных монет</td>
+</tr>
+<tr>
+<td>Простое рукопашное</td>
+<td>Секира</td>
+<td>1d6 рубящий</td>
+<td>Легкое, топор</td>
+<td>5 золотых монет</td>
+</tr>
+<tr>
+<td>Простое дальнобойное</td>
+<td>Дротик</td>
+<td>1d4 колющий</td>
+<td>Метательное (диапазон 20 футов)</td>
+<td>5 серебряных монет</td>
+</tr>
+<tr>
+<td>Простое дальнобойное</td>
+<td>Камень для метания</td>
+<td>1d4 дробящий</td>
+<td>Метательное (диапазон 30 футов)</td>
+<td>1 серебряная монета</td>
+</tr>
+<tr>
+<td>Воинское рукопашное</td>
+<td>Боевой топор</td>
+<td>1d8 рубящий</td>
+<td>Легкое, топор</td>
+<td>10 золотых монет</td>
+</tr>
+<tr>
+<td>Воинское рукопашное</td>
+<td>Молот боевой</td>
+<td>1d8 дробящий</td>
+<td>Тяжелое, двуручное</td>
+<td>10 золотых монет</td>
+</tr>
+<tr>
+<td>Воинское рукопашное</td>
+<td>Меч короткий</td>
+<td>1d6 колющий</td>
+<td>Легкое, фехтовальное оружие</td>
+<td>10 золотых монет</td>
+</tr>
+<tr>
+<td>Воинское рукопашное</td>
+<td>Секира боевая</td>
+<td>1d8 рубящий</td>
+<td>Тяжелое, топор</td>
+<td>10 золотых монет</td>
+</tr>
+<tr>
+<td>Воинское рукопашное</td>
+<td>Пика</td>
+<td>1d10 колющий</td>
+<td>Тяжелое, двуручное</td>
+<td>15 золотых монет</td>
+</tr>
+<tr>
+<td>Воинское рукопашное</td>
+<td>Кнут</td>
+<td>1d6 ударный</td>
+<td>Легкое, дробящее</td>
+<td>2 золотые монеты</td>
+</tr>
+<tr>
+<td>Воинское рукопашное</td>
+<td>Кинжал боевой</td>
+<td>1d6 колющий</td>
+<td>Фехтовальное оружие, легкое, метательное (диапазон 20 футов)</td>
+<td>10 золотых монет</td>
+</tr>
+<tr>
+<td>Воинское рукопашное</td>
+<td>Меч длинный</td>
+<td>1d8 рубящий</td>
+<td>Двуручное</td>
+<td>15 золотых монет</td>
+</tr>
+<tr>
+<td>Воинское дальнобойное</td>
+<td>Арбалет легкий</td>
+<td>1d8 колющий</td>
+<td>Свойство "Стрельба в упор"</td>
+<td>25 золотых монет</td>
+</tr>
+<tr>
+<td>Воинское дальнобойное</td>
+<td>Лук длинный</td>
+<td>1d8 колющий</td>
+<td>Требует две руки, стрелы (диапазон 150/600 футов)</td>
+<td>50 золотых монет</td>
+</tr>
+</tbody>
+</table>
+</p>
+<button class="popup-close" type="button">Закрыть</button>
+</section>
+</div>
+<div aria-hidden="true" class="popup" id="character-popup">
+<div class="popup-backdrop"></div>
+<section class="popup-panel popup-wide">
+<h2>Личный лист персонажа</h2>
+<p class="shop-intro">Данные сохраняются в браузере на этом устройстве. Изображение хранится локально и не отправляется на сервер.</p>
+<form id="character-form">
+<div class="sheet-grid">
+<div class="form-section">
+<h3 class="section-title">Основные сведения</h3>
+<div class="fields">
+<div class="field full"><label for="fullName">ФИО</label><input autocomplete="off" id="fullName" name="fullName" type="text"/></div>
+<div class="field"><label for="className">Класс</label><input autocomplete="off" id="className" name="className" type="text"/></div>
+<div class="field"><label for="race">Раса</label><input autocomplete="off" id="race" name="race" type="text"/></div>
+<div class="field"><label for="age">Возраст</label><input id="age" min="0" name="age" step="1" type="number"/></div>
+<div class="field"><label for="height">Рост</label><input id="height" name="height" placeholder="например, 178 см" type="text"/></div>
+<div class="field"><label for="weight">Вес</label><input id="weight" name="weight" placeholder="например, 72 кг" type="text"/></div>
+<div class="field full"><label for="biography">Биография</label><textarea id="biography" name="biography"></textarea></div>
+<div class="field full"><label for="personality">Характер</label><textarea id="personality" name="personality"></textarea></div>
+</div>
+</div>
+<div class="form-section">
+<h3 class="section-title">Внешность</h3>
+<div class="portrait-card">
+<div class="portrait-frame">
+<img alt="Портрет персонажа" id="portrait-preview"/>
+<div class="portrait-placeholder">Место для<br/>портрета</div>
+</div>
+<div>
+<label class="file-label" for="portrait-input">Загрузить изображение</label>
+<input accept=".png,.jpg,.jpeg,image/png,image/jpeg" hidden="" id="portrait-input" type="file"/>
+<div class="file-hint">PNG/JPG, не более 3 МБ.</div>
+<div class="status" id="portrait-status"></div>
+<button class="secondary-button hidden" id="delete-portrait" type="button">Удалить портрет</button></div>
+</div>
+</div>
+<div class="form-section">
+<h3 class="section-title">Характеристики</h3>
+<p class="shop-intro">Введите значение от 1 до 20. Модификатор рассчитывается как ⌊(характеристика − 10) / 2⌋.</p>
+<div class="stats-grid">
+<div class="stat-card"><div class="stat-name">Сила</div><input data-stat="strength" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="strength">+0</div></div>
+<div class="stat-card"><div class="stat-name">Ловкость</div><input data-stat="dexterity" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="dexterity">+0</div></div>
+<div class="stat-card"><div class="stat-name">Телосложение</div><input data-stat="constitution" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="constitution">+0</div></div>
+<div class="stat-card"><div class="stat-name">Интеллект</div><input data-stat="intelligence" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="intelligence">+0</div></div>
+<div class="stat-card"><div class="stat-name">Мудрость</div><input data-stat="wisdom" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="wisdom">+0</div></div>
+<div class="stat-card"><div class="stat-name">Харизма</div><input data-stat="charisma" max="20" min="1" step="1" type="number"/><div class="modifier" data-modifier="charisma">+0</div></div>
+</div>
+</div>
+<div class="form-section wallet-section"><h3 class="section-title">Кошелёк</h3><div class="wallet-box" id="wallet-value"></div></div></div>
+<div class="form-section" style="margin-top:22px;">
+<h3 class="section-title">Инвентарь</h3>
+<div class="table-wrap">
+<table class="inventory-table">
+<thead><tr><th>Предмет</th><th>Кол-во</th><th>Урон / кубик</th><th>Примечание</th><th></th></tr></thead>
+<tbody id="inventory-body"></tbody>
+</table>
+</div>
+<div class="actions">
+<button class="primary-button" id="add-inventory" type="button">+ Добавить предмет</button>
+<button class="primary-button" id="save-character" type="button">Сохранить лист</button>
+<button class="secondary-button" id="export-character" type="button">Скачать JSON</button><label class="secondary-button import-label" for="import-character">Импортировать JSON</label><input accept=".json,application/json" hidden="" id="import-character" type="file"/></div>
+<div class="status" id="character-status"></div>
+</div>
+<div class="form-section notes-section"><h3 class="section-title">Заметки персонажа</h3><textarea class="notes-area" id="character-notes" name="characterNotes" placeholder="Личные записи персонажа..."></textarea></div></form>
+<button class="popup-close" type="button">Закрыть</button>
+</section>
+</div><div aria-hidden="true" class="popup" id="chat-popup"><div class="popup-backdrop"></div><section class="popup-panel chat-panel"><h2>Чат</h2><p class="shop-intro">Здесь персонаж может разговаривать с заскриптованными обитателями мира. Реплики торговцев появляются автоматически при покупке.</p><div class="chat-messages" id="chat-messages"></div><form class="chat-form" id="chat-form"><input autocomplete="off" id="chat-input" maxlength="500" placeholder="Напишите сообщение..." type="text"/><button class="primary-button" type="submit">Отправить</button></form><button class="popup-close" type="button">Закрыть</button></section></div>
+
+<footer class="site-footer">Личные данные персонажа и заметки сохраняются локально в браузере.</footer>
+
+<script defer="True" src="rpg-site.js"></script></body>
+</html>
